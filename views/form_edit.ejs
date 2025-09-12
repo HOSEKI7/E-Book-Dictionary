@@ -1,0 +1,28 @@
+<h1>Edit Buku</h1>
+<form action="/books/<%= book.id %>?_method=PUT" method="post">
+  <div style="display: flex; flex-direction: column; gap: 2px">
+    <label>Nama: <input name="name" value="<%= book.name %>" required /></label
+    ><br />
+    <label
+      >Kategori:
+      <input name="category" value="<%= book.category %>" required /></label
+    ><br />
+    <label
+      >Harga:
+      <input
+        name="price"
+        type="number"
+        step="0.01"
+        value="<%= book.price %>"
+        required /></label
+    ><br />
+    <label
+      >Penerbit: <input name="publisher" value="<%= book.publisher %>" /></label
+    ><br />
+    <label
+      >Image URL:
+      <input name="image_url" value="<%= book.image_url %>" /></label
+    ><br />
+  </div>
+  <button type="submit">Simpan</button>
+</form>

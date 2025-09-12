@@ -1,0 +1,23 @@
+{
+  "name": "Aplikasi Toko Buku - Tes Asisten Praktikum",
+  "version": "1.0.0",
+  "description": "Aplikasi Web Toko Buku dengan Node.js, Express, dan MySQL",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
+    "method-override": "^3.0.0",
+    "mysql2": "^3.14.5",
+    "nodemon": "^3.1.10"
+  }
+}

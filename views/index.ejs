@@ -1,0 +1,57 @@
+<h1>Daftar Buku</h1>
+
+<div style="display: flex; gap: 10px; align-items: center; margin-bottom: 20px">
+  Filter kategori: <a href="/">Semua</a> |
+  <a href="/?category=Teknologi">Teknologi</a> |
+  <a href="/?category=Fiksi">Fiksi</a> | <a href="/?category=Manga">Manga</a> |
+  <a href="/?category=Self Help">Self Help</a>
+</div>
+
+<div class="grid">
+  <% books.forEach(book => { %>
+  <div class="card">
+    <a
+      href="/books/<%= book.id %>"
+      style="text-decoration: none; color: white; font-size: large"
+    >
+      <img src="<%= book.image_url %>" alt="<%= book.name %>" />
+      <h3><%= book.name %></h3>
+    </a>
+    <p>Kategori: <%= book.category %></p>
+    <p>Harga: Rp <%= Number(book.price).toLocaleString() %></p>
+    <p>Penerbit: <%= book.publisher %></p>
+    <div
+      style="
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <a
+        href="/books/<%= book.id %>/edit"
+        method="put"
+        style="
+          text-decoration: none;
+          color: white;
+          padding: 6px 15px;
+          background-color: gold;
+          border-radius: 5px;
+          font-size: medium;
+        "
+        >Edit</a
+      >
+      |
+      <form
+        action="/books/<%= book.id %>?_method=DELETE"
+        method="post"
+        style="display: inline; font-size: medium"
+      >
+        <button type="submit" onclick="return confirm('Hapus buku?')">
+          Hapus
+        </button>
+      </form>
+    </div>
+  </div>
+  <% }) %>
+</div>
