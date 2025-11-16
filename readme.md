@@ -1,1 +1,1 @@
-## Aplikasi Toko Buku CRUD with NodeJS, ExpressJS, dan MySQL
+## E-Book Dictionary CRUD with NodeJS, ExpressJS, dan MySQL
